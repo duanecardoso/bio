@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Duane Cardoso | Links</title>
+<meta name="description" content="Duane Cardoso, UGC Creator. Portfólio, tabela de investimento, redes e contato num lugar só.">
+<meta name="theme-color" content="#fafaf9">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%E2%9C%A8%3C/text%3E%3C/svg%3E">
+<meta property="og:title" content="Duane Cardoso | UGC Creator">
+<meta property="og:description" content="Portfólio, tabela de investimento, redes e contato num lugar só.">
+<meta property="og:image" content="https://duanecardoso.github.io/bio/fotos/avatar.webp">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400..800&display=swap" rel="stylesheet">
+<style>
+/* =====================================================================
+   PALETA DA DUANE (a mesma do portfólio)
+   branco #fffcf7 | manteiga #f8e7a2 | rosa claro #ce96a5 | rosa #d74f73 | marrom #6b4537
+   ===================================================================== */
+:root{
+  --fundo:#fafaf9;
+  --branco:#ffffff;
+  --manteiga:#f8e7a2;
+  --manteiga-suave:#fdf5d6;
+  --rosa-claro:#ce96a5;
+  --rosa-suave:#f6e4e8;
+  --rosa:#d74f73;
+  --rosa-texto:#b23a5c;
+  --marrom:#6b4537;
+  --marrom-escuro:#4e3127;
+  --texto:#161616;
+  --texto-2:#6b6b6b;
+  --linha:rgba(0,0,0,.08);
+  --vidro:rgba(255,255,255,.72);
+  --sombra:0 1px 2px rgba(0,0,0,.04),0 10px 30px rgba(0,0,0,.06);
+  --sombra-forte:0 30px 60px -22px rgba(0,0,0,.28);
+  --r:22px;
+  --mola:cubic-bezier(.2,.9,.25,1.15);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100vh;font-family:"Montserrat",system-ui,"Segoe UI",Roboto,sans-serif;color:var(--texto);background:var(--fundo);line-height:1.5;overflow-x:hidden;-webkit-font-smoothing:antialiased;letter-spacing:-.005em}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(circle,rgba(107,69,55,.14) 1.2px,transparent 1.4px) 0 0/24px 24px,
+    radial-gradient(50% 35% at 90% 8%,rgba(248,231,162,.7),transparent 70%),
+    radial-gradient(45% 30% at 5% 40%,rgba(206,150,165,.3),transparent 70%),
+    radial-gradient(50% 30% at 100% 85%,rgba(248,231,162,.45),transparent 70%);
+}
+h1,h2,h3,p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--rosa);outline-offset:3px;border-radius:12px}
+
+.pagina{width:100%;max-width:480px;margin:0 auto;padding:max(28px,env(safe-area-inset-top)) 16px 48px}
+
+/* vidro e ícones de app, iguais ao portfólio */
+.vidro{background:var(--vidro);-webkit-backdrop-filter:blur(22px) saturate(160%);backdrop-filter:blur(22px) saturate(160%);border:1px solid rgba(255,255,255,.9);box-shadow:inset 0 1px 0 #fff,var(--sombra)}
+.app{display:grid;place-items:center;flex:none;width:46px;height:46px;border-radius:13px;color:#fff;font-weight:700;font-size:1.3rem;line-height:1;box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 3px 8px rgba(107,69,55,.15)}
+.app svg{width:56%;height:56%}
+.c-rosa{background:linear-gradient(160deg,#e66f8f,var(--rosa))}
+.c-manteiga{background:linear-gradient(160deg,#fff3c4,var(--manteiga));color:var(--marrom)}
+.c-rosa-claro{background:linear-gradient(160deg,#e2b4c0,var(--rosa-claro))}
+.c-marrom{background:linear-gradient(160deg,#8a5d4c,var(--marrom))}
+.c-branco{background:#fff;color:var(--marrom);border:1px solid var(--linha)}
+
+/* ===================== TOPO / PERFIL ===================== */
+.status{display:flex;justify-content:space-between;align-items:center;font-size:.82rem;font-weight:700;color:var(--texto);padding:0 6px;margin-bottom:22px}
+.status .icones{display:flex;gap:6px;align-items:center}
+.status svg{height:11px;width:auto}
+
+.perfil{text-align:center}
+.avatar-area{position:relative;width:168px;margin:0 auto 22px}
+.avatar{position:relative;width:168px;height:168px;border-radius:50%;padding:5px;
+  background:conic-gradient(from 200deg,var(--rosa),var(--manteiga),var(--rosa-claro),var(--rosa));
+  box-shadow:0 22px 40px -18px rgba(107,69,55,.55)}
+.avatar img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:4px solid var(--fundo);background:#eee}
+.selo{position:absolute;top:-6px;right:-22px;width:72px;height:72px;border-radius:50%;background:var(--rosa);color:#fff;display:grid;place-items:center;text-align:center;font-weight:800;font-size:.7rem;line-height:1.1;transform:rotate(12deg);box-shadow:0 10px 24px -8px rgba(215,79,115,.6);border:3px solid var(--fundo)}
+.post-it{position:absolute;left:-46px;bottom:6px;background:var(--manteiga);color:var(--marrom);font-weight:700;font-size:.72rem;line-height:1.2;padding:10px 10px 12px;width:96px;border-radius:4px 4px 14px 4px;transform:rotate(-8deg);box-shadow:0 12px 24px -10px rgba(107,69,55,.45);text-align:left}
+.post-it small{display:block;font-size:.58rem;opacity:.85;margin-bottom:2px;text-transform:uppercase;letter-spacing:.06em}
+
+.ilha{display:inline-flex;align-items:center;gap:9px;background:var(--texto);color:#fff;border-radius:999px;padding:7px 15px 7px 11px;font-size:.8rem;font-weight:600}
+.ilha i{width:10px;height:10px;border-radius:50%;background:#7ed98f;box-shadow:0 0 0 4px rgba(126,217,143,.25);animation:pulsar 2s ease-in-out infinite}
+@keyframes pulsar{50%{box-shadow:0 0 0 7px rgba(126,217,143,0)}}
+
+.perfil h1{font-size:clamp(2.2rem,10.4vw,3.1rem);font-weight:800;letter-spacing:-.05em;line-height:.95;margin:16px 0 10px}
+.perfil h1 .ponto{color:var(--rosa)}
+.rotulo{display:inline-flex;align-items:center;gap:8px;font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--rosa-texto)}
+.rotulo::before{content:"";width:9px;height:9px;border-radius:3px;background:var(--manteiga);box-shadow:0 0 0 2px var(--rosa-claro)}
+.perfil .bio{margin:14px auto 0;max-width:36ch;color:var(--texto-2);font-size:.98rem}
+.perfil .bio strong{color:var(--texto)}
+
+.acoes{display:flex;gap:10px;justify-content:center;margin-top:22px}
+.botao{display:inline-flex;align-items:center;justify-content:center;gap:6px;flex:1;max-width:190px;min-height:50px;padding:12px 14px;border-radius:999px;font-weight:700;font-size:.92rem;white-space:nowrap;text-decoration:none;transition:transform .3s var(--mola),background .2s}
+.botao:active{transform:scale(.95)}
+.botao-principal{background:var(--marrom);color:#fff;box-shadow:0 8px 20px -8px rgba(107,69,55,.6)}
+.botao-principal:hover{background:var(--marrom-escuro)}
+.botao-claro{background:var(--branco);color:var(--texto);border:1px solid var(--linha);box-shadow:var(--sombra)}
+.botao-claro:hover{background:var(--manteiga-suave)}
+
+/* ===================== NOTIFICAÇÕES (números) ===================== */
+.notifs{display:grid;gap:8px;margin-top:30px}
+.notif{display:flex;gap:12px;align-items:center;border-radius:20px;padding:11px 14px}
+.notif .app{width:40px;height:40px;border-radius:11px;font-size:1.2rem}
+.notif .n-txt{flex:1;min-width:0;text-align:left}
+.notif .n-topo{display:flex;justify-content:space-between;gap:8px;font-size:.64rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--texto-2)}
+.notif strong{display:block;font-size:1.05rem;font-weight:800;letter-spacing:-.03em;line-height:1.2}
+.notif strong span{font-weight:600;font-size:.86rem;color:var(--texto-2);letter-spacing:0}
+
+/* ===================== SEÇÕES ===================== */
+section{margin-top:46px;scroll-margin-top:16px}
+.titulo{text-align:center;margin-bottom:18px}
+.titulo h2{font-size:1.7rem;font-weight:800;letter-spacing:-.045em;line-height:1.05;margin-top:8px}
+.titulo h2 em{font-style:normal;color:var(--rosa)}
+
+/* cartão de destaque (portfólio) */
+.destaque{position:relative;display:block;overflow:hidden;border-radius:26px;padding:22px 22px 20px;text-decoration:none;color:#fff;
+  background:linear-gradient(150deg,#8a5d4c 0%,var(--marrom) 45%,var(--marrom-escuro) 100%);
+  box-shadow:var(--sombra-forte);transition:transform .35s var(--mola)}
+.destaque:hover{transform:translateY(-3px)}
+.destaque:active{transform:scale(.98)}
+.destaque::after{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(248,231,162,.45),transparent 70%)}
+.destaque .janela-barra{display:flex;align-items:center;gap:6px;margin-bottom:16px}
+.destaque .janela-barra i{width:10px;height:10px;border-radius:50%}
+.destaque .janela-barra b{margin-left:8px;font-size:.72rem;font-weight:600;opacity:.75}
+.destaque h3{font-size:1.4rem;font-weight:800;letter-spacing:-.035em;line-height:1.1}
+.destaque p{margin-top:8px;font-size:.9rem;opacity:.85;max-width:30ch}
+.destaque .ir{position:relative;z-index:1;display:inline-flex;align-items:center;gap:6px;margin-top:16px;background:var(--manteiga);color:var(--marrom);font-weight:700;font-size:.88rem;padding:10px 16px;border-radius:999px}
+.destaque .miniaturas{position:absolute;right:16px;bottom:16px;display:flex}
+.destaque .miniaturas img{width:34px;height:34px;border-radius:50%;border:2px solid var(--marrom);margin-left:-10px;background:#fff}
+
+/* lista de links (estilo "canal" do portfólio) */
+.links{display:grid;gap:10px;margin-top:12px}
+.link{display:flex;align-items:center;gap:14px;padding:12px 14px;border-radius:var(--r);text-decoration:none;background:#fff;border:1px solid var(--linha);box-shadow:var(--sombra);transition:transform .35s var(--mola)}
+.link:hover{transform:translateX(5px)}
+.link:active{transform:scale(.98)}
+.link .txt{flex:1;min-width:0}
+.link b{display:block;font-size:.98rem;letter-spacing:-.01em}
+.link small{display:block;color:var(--texto-2);font-size:.82rem;line-height:1.35}
+.link .seta{color:var(--rosa-claro);font-size:1.4rem;font-weight:700}
+.link .tag{display:inline-block;margin-left:6px;font-size:.6rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;background:var(--rosa-suave);color:var(--rosa-texto);padding:3px 7px;border-radius:999px;vertical-align:2px}
+
+/* esteira de logos */
+.marcas{margin-top:22px;text-align:center}
+.marcas p{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--texto-2)}
+.faixa{margin:6px -16px 0;overflow:hidden;padding:12px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.faixa-trilho{display:flex;width:max-content;animation:rolar 40s linear infinite}
+.faixa-trilho li{padding:0 8px;flex:none}
+.faixa-trilho img{width:52px;height:52px;border-radius:50%;box-shadow:0 6px 14px -6px rgba(107,69,55,.35);background:#fff}
+@keyframes rolar{to{transform:translateX(-50%)}}
+
+/* tela de apps (redes) */
+.tela-apps{border-radius:30px;padding:20px 12px 16px}
+.grade-apps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px 6px}
+.grade-apps a{display:flex;flex-direction:column;align-items:center;gap:7px;text-decoration:none;font-size:.72rem;font-weight:600;color:var(--texto);transition:transform .3s var(--mola)}
+.grade-apps a:hover{transform:translateY(-4px)}
+.grade-apps a:active{transform:scale(.92)}
+.grade-apps .app{width:60px;height:60px;border-radius:16px}
+.grade-apps .app.emoji{font-size:1.6rem}
+
+/* rodapé */
+.rodape{margin-top:44px;text-align:center;color:var(--texto-2);font-size:.8rem}
+.rodape .assinatura{font-size:1.1rem;font-weight:800;letter-spacing:-.03em;color:var(--texto)}
+.rodape .assinatura span{color:var(--rosa)}
+.rodape p+p{margin-top:4px}
+
+/* entrada suave */
+.surgir{opacity:0;transform:translateY(14px);animation:surgir .7s var(--mola) forwards}
+@keyframes surgir{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  .surgir{opacity:1;transform:none;animation:none}
+  .faixa-trilho,.ilha i{animation:none}
+}
+@media (max-width:380px){
+  .post-it{display:none}
+  .grade-apps .app{width:54px;height:54px}
+}
+</style>
+</head>
+<body>
+<main class="pagina">
+
+  <!-- barrinha de status, igual ao topo do portfólio -->
+  <div class="status surgir" aria-hidden="true">
+    <span id="relogio">9:41</span>
+    <span class="icones">
+      <svg viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg>
+      <svg viewBox="0 0 27 12" fill="none"><rect x=".5" y=".5" width="22" height="11" rx="3.5" stroke="currentColor" opacity=".4"/><rect x="2" y="2" width="17" height="8" rx="2" fill="currentColor"/><path d="M24.5 4v4c.8-.3 1.5-1 1.5-2s-.7-1.7-1.5-2z" fill="currentColor" opacity=".4"/></svg>
+    </span>
+  </div>
+
+  <!-- ===================== PERFIL ===================== -->
+  <header class="perfil">
+    <div class="avatar-area surgir" style="animation-delay:.05s">
+      <div class="avatar">
+        <!-- FOTO: fotos/avatar.webp (quadrada). Para trocar, substitua o arquivo mantendo o nome. -->
+        <img src="fotos/avatar.webp" alt="Duane Cardoso segurando um celular, em estúdio de fundo claro" width="480" height="480">
+      </div>
+      <span class="selo" aria-hidden="true">UGC<br>creator</span>
+      <div class="post-it" aria-hidden="true"><small>lembrete</small>roteiro aprovado antes de gravar ✓</div>
+    </div>
+
+    <div class="surgir" style="animation-delay:.12s">
+      <span class="ilha"><i aria-hidden="true"></i>disponível para novas marcas</span>
+      <h1>Duane Cardoso<span class="ponto">.</span></h1>
+      <span class="rotulo">UGC Creator · @byduanecardoso</span>
+      <p class="bio">Vídeos de <strong>review e demonstração</strong> para marcas de beleza, moda, fitness e tech. Conteúdo que parece <strong>real</strong> e cria <strong>conexão</strong>.</p>
+    </div>
+
+    <div class="acoes surgir" style="animation-delay:.2s">
+      <a class="botao botao-principal" href="#marcas">Sou marca ↓</a>
+      <a class="botao botao-claro" href="#redes">Me acompanhar ↓</a>
+    </div>
+  </header>
+
+  <!-- ===================== NÚMEROS (notificações) ===================== -->
+  <ul class="notifs surgir" style="animation-delay:.28s" aria-label="Meus números">
+    <li class="notif vidro">
+      <span class="app c-manteiga" aria-hidden="true">🎬</span>
+      <div class="n-txt"><div class="n-topo"><span>Vídeos</span><span>agora</span></div><strong>+100 <span>vídeos entregues</span></strong></div>
+    </li>
+    <li class="notif vidro">
+      <span class="app c-rosa-claro" aria-hidden="true">🤝</span>
+      <div class="n-txt"><div class="n-topo"><span>Marcas</span><span>2 min</span></div><strong>+50 <span>marcas atendidas</span></strong></div>
+    </li>
+    <li class="notif vidro">
+      <span class="app c-branco" aria-hidden="true">👀</span>
+      <div class="n-txt"><div class="n-topo"><span>Views</span><span>ontem</span></div><strong>1M <span>de views somadas</span></strong></div>
+    </li>
+  </ul>
+
+  <!-- ===================== PARA MARCAS ===================== -->
+  <section id="marcas" aria-labelledby="titulo-marcas" class="surgir" style="animation-delay:.36s">
+    <div class="titulo">
+      <span class="rotulo">Para marcas</span>
+      <h2 id="titulo-marcas">Bora criar <em>juntos?</em></h2>
+    </div>
+
+    <a class="destaque" href="https://duanecardoso.github.io/ugc/" target="_blank" rel="noopener">
+      <div class="janela-barra" aria-hidden="true"><i style="background:#d74f73"></i><i style="background:#f8e7a2"></i><i style="background:#ce96a5"></i><b>portfolio.ugc</b></div>
+      <h3>Meu portfólio UGC</h3>
+      <p>Vídeos por nicho, fotos, estudo de caso com 793 mil views e pacotes.</p>
+      <span class="ir">Ver portfólio →</span>
+      <span class="miniaturas" aria-hidden="true">
+        <img src="fotos/logos/logo-dove.webp" alt="" width="34" height="34">
+        <img src="fotos/logos/logo-pantene.webp" alt="" width="34" height="34">
+        <img src="fotos/logos/logo-cerave.webp" alt="" width="34" height="34">
+      </span>
+    </a>
+
+    <div class="links">
+      <!-- Mensagem pronta do WhatsApp: troque o texto depois de ?text= se quiser -->
+      <a class="link" href="https://wa.me/5561993823059?text=Oi%20Duane!%20Vi%20seu%20link%20na%20bio%20e%20quero%20receber%20sua%20tabela%20de%20investimento%20e%20os%20pacotes%20UGC.%20%F0%9F%92%8C" target="_blank" rel="noopener">
+        <span class="app c-branco" aria-hidden="true">💌</span>
+        <span class="txt"><b>Tabela de investimento</b><small>Valores e pacotes UGC no seu WhatsApp</small></span>
+        <span class="seta" aria-hidden="true">›</span>
+      </a>
+      <a class="link" href="https://wa.me/message/3T3RGVIR6SXPG1" target="_blank" rel="noopener">
+        <span class="app c-rosa" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2.5a9.5 9.5 0 0 0-8.2 14.3L2.5 21.5l4.8-1.3A9.5 9.5 0 1 0 12 2.5zm5 13.2c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.6-.1l.8-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></span>
+        <span class="txt"><b>Falar no WhatsApp</b><small>(61) 99382-3059</small></span>
+        <span class="seta" aria-hidden="true">›</span>
+      </a>
+      <a class="link" href="mailto:ugcduanecardoso@gmail.com?subject=Parceria%20UGC">
+        <span class="app c-manteiga" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="m3.5 7 8.5 6.5L20.5 7"/></svg></span>
+        <span class="txt"><b>Mandar um e-mail</b><small>ugcduanecardoso@gmail.com</small></span>
+        <span class="seta" aria-hidden="true">›</span>
+      </a>
+    </div>
+
+    <div class="marcas">
+      <p>Marcas que confiaram</p>
+      <div class="faixa" aria-hidden="true"><ul class="faixa-trilho" id="faixa"></ul></div>
+    </div>
+  </section>
+
+  <!-- ===================== REDES ===================== -->
+  <section id="redes" aria-labelledby="titulo-redes" class="surgir" style="animation-delay:.44s">
+    <div class="titulo">
+      <span class="rotulo">Me acompanhe</span>
+      <h2 id="titulo-redes">Rotina <em>real,</em> todo dia</h2>
+    </div>
+    <nav class="tela-apps vidro" aria-label="Minhas redes">
+      <div class="grade-apps">
+        <a href="https://www.instagram.com/byduanecardoso/" target="_blank" rel="noopener">
+          <span class="app c-rosa-claro" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="#fff"/></svg></span>
+          Instagram
+        </a>
+        <a href="https://www.tiktok.com/@aanecardoso/" target="_blank" rel="noopener">
+          <span class="app c-marrom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.5 3 2.5 5 5.5 5"/></svg></span>
+          TikTok
+        </a>
+        <a href="https://wa.me/message/3T3RGVIR6SXPG1" target="_blank" rel="noopener">
+          <span class="app c-rosa" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2.5a9.5 9.5 0 0 0-8.2 14.3L2.5 21.5l4.8-1.3A9.5 9.5 0 1 0 12 2.5zm5 13.2c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.6-.1l.8-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></span>
+          WhatsApp
+        </a>
+        <a href="https://duanecardoso.github.io/ugc/" target="_blank" rel="noopener">
+          <span class="app c-manteiga emoji" aria-hidden="true">✨</span>
+          Portfólio
+        </a>
+      </div>
+    </nav>
+  </section>
+
+  <footer class="rodape">
+    <p class="assinatura">Duane Cardoso<span>.</span></p>
+    <p>UGC Creator · Valparaíso de Goiás</p>
+    <p>© <span id="ano">2026</span></p>
+  </footer>
+</main>
+
+<script>
+/* LOGOS DA ESTEIRA: arquivo dentro de fotos/logos. Para adicionar, coloque o arquivo na pasta e o nome aqui. */
+const logos = ["heyvera","dove","niely","prohall","nomma","pantene","cerave","teeva","bigboom","garnier","dermachem","cif","matrix","muriel","aura-beauty","sace-lady"];
+
+const faixa = document.getElementById("faixa");
+const itens = logos.map(l => `<li><img src="fotos/logos/logo-${l}.webp" alt="" width="52" height="52" loading="lazy"></li>`).join("");
+faixa.innerHTML = itens + itens; // duplicado para o loop ficar contínuo
+
+/* relógio de verdade na barrinha de status */
+function horaAgora(){
+  const d = new Date();
+  document.getElementById("relogio").textContent = d.getHours() + ":" + String(d.getMinutes()).padStart(2,"0");
+}
+horaAgora(); setInterval(horaAgora, 30000);
+document.getElementById("ano").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
