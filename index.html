@@ -112,31 +112,37 @@ section{margin-top:48px;scroll-margin-top:20px}
 .grade-apps a:hover{transform:translateY(-4px)}
 .grade-apps a:active{transform:scale(.92)}
 
-/* ----- cupons (estilo Wallet do iPhone) ----- */
-.wallet{position:relative;display:block;text-decoration:none;color:var(--texto);padding-top:120px;transition:transform .35s var(--mola)}
-.wallet:active{transform:scale(.98)}
-.passe{position:absolute;left:0;right:0;height:110px;border-radius:20px;padding:14px 18px;display:flex;justify-content:space-between;align-items:flex-start;font-weight:700;font-size:.8rem;box-shadow:0 -6px 18px -10px rgba(0,0,0,.25);transition:transform .45s var(--mola)}
-.passe span{display:flex;align-items:center;gap:8px}
-.passe small{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;opacity:.75}
-.passe.p1{top:0;background:var(--manteiga);color:var(--marrom)}
-.passe.p2{top:40px;background:var(--rosa-claro);color:#fff}
-.passe.p3{top:80px;background:var(--marrom);color:#fff}
-.wallet:hover .p1{transform:translateY(-10px)}
-.wallet:hover .p2{transform:translateY(-5px)}
-.cupom{display:block;position:relative;z-index:1;background:var(--branco);border:1px solid var(--linha);border-radius:22px;box-shadow:var(--sombra-forte);overflow:hidden}
-.cupom-topo{padding:20px 20px 18px}
-.cupom-topo .mini{display:block;font-size:.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--texto-2)}
-.cupom-topo .h3{display:block;font-size:1.25rem;font-weight:800;letter-spacing:-.035em;line-height:1.15;margin-top:6px}
-.cupom-topo .h3 em{font-style:normal;color:var(--rosa)}
-.cupom-topo .desc{display:block;margin-top:6px;color:var(--texto-2);font-size:.86rem}
-/* picote do cupom */
-.picote{position:relative;height:0;border-top:2px dashed var(--linha);margin:0 18px}
-.picote::before,.picote::after{content:"";position:absolute;top:-12px;width:22px;height:22px;border-radius:50%;background:var(--fundo);border:1px solid var(--linha)}
-.picote::before{left:-30px}
-.picote::after{right:-30px}
-.cupom-base{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px 18px}
-.codigo{font-weight:700;font-size:.78rem;letter-spacing:.02em;color:var(--marrom);background:var(--manteiga-suave);border:1.5px dashed var(--manteiga);padding:7px 12px;border-radius:10px}
-.ver{display:inline-flex;align-items:center;gap:6px;background:var(--rosa);color:#fff;font-weight:700;font-size:.88rem;padding:10px 16px;border-radius:999px;white-space:nowrap;box-shadow:0 8px 18px -8px rgba(215,79,115,.7)}
+/* ----- cupons (tickets) ----- */
+.cupons{display:grid;gap:10px}
+.ticket{display:flex;align-items:stretch;background:var(--branco);border:1px solid var(--linha);border-radius:20px;box-shadow:var(--sombra);overflow:hidden;transition:transform .35s var(--mola)}
+.ticket:hover{transform:translateY(-2px)}
+.t-loja{flex:1;min-width:0;display:flex;align-items:center;gap:12px;padding:12px 10px 12px 12px;text-decoration:none;color:var(--texto)}
+.t-loja:active{opacity:.7}
+.t-logo{flex:none;width:44px;height:44px;border-radius:50%;overflow:hidden;display:grid;place-items:center;background:var(--manteiga-suave);color:var(--marrom);font-weight:800;font-size:1.05rem;border:1px solid var(--linha)}
+.t-logo img{width:100%;height:100%;object-fit:cover}
+.t-nome{min-width:0}
+.t-nome b{display:block;font-size:.95rem;letter-spacing:-.01em;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.t-nome small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:.74rem;color:var(--texto-2);margin-top:2px}
+.t-nome small i{font-style:normal;color:var(--rosa-texto);font-weight:700}
+/* picote vertical */
+.t-picote{position:relative;flex:none;width:0;border-left:2px dashed var(--linha);margin:10px 0}
+.t-picote::before,.t-picote::after{content:"";position:absolute;left:-10px;width:18px;height:18px;border-radius:50%;background:var(--fundo);border:1px solid var(--linha)}
+.t-picote::before{top:-20px}
+.t-picote::after{bottom:-20px}
+.t-copiar{flex:none;width:146px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:10px 12px;border:0;background:none;font:inherit;cursor:pointer;color:var(--texto)}
+.t-codigo{font-weight:800;font-size:.7rem;letter-spacing:.02em;color:var(--marrom);background:var(--manteiga-suave);border:1.5px dashed var(--manteiga);padding:6px 8px;border-radius:8px;white-space:nowrap;text-align:center;line-height:1.2}
+.t-acao{font-size:.68rem;font-weight:700;color:var(--rosa-texto);text-transform:uppercase;letter-spacing:.06em}
+.t-copiar:active .t-codigo{transform:scale(.95)}
+.t-copiar.ok .t-codigo{background:#e6f6e9;border-color:#7ed98f;color:#2f7a3e}
+.t-copiar.ok .t-acao{color:#2f7a3e}
+.cupons-nota{margin-top:12px;text-align:center;font-size:.8rem;color:var(--texto-2)}
+.cupons-nota a{color:var(--rosa-texto);font-weight:700;text-decoration:none}
+
+/* aviso "copiado" estilo notificação do iPhone */
+.aviso{position:fixed;left:50%;top:max(12px,env(safe-area-inset-top));z-index:50;transform:translate(-50%,-140%);display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.88);-webkit-backdrop-filter:blur(20px) saturate(160%);backdrop-filter:blur(20px) saturate(160%);border:1px solid rgba(255,255,255,.9);box-shadow:var(--sombra-forte);border-radius:20px;padding:10px 16px 10px 10px;font-size:.86rem;font-weight:600;line-height:1.35;width:max-content;max-width:calc(100% - 32px);transition:transform .45s var(--mola)}
+.aviso.ver{transform:translate(-50%,0)}
+.aviso .app{width:34px;height:34px;border-radius:10px;font-size:1rem}
+.aviso b{color:var(--rosa-texto)}
 
 /* ----- sobre (cartão final) ----- */
 .sobre{position:relative;padding:22px 22px 24px;text-align:center}
@@ -164,8 +170,10 @@ section{margin-top:48px;scroll-margin-top:20px}
   .ilha i{animation:none}
 }
 @media (max-width:360px){
-  .cupom-base{flex-direction:column;align-items:stretch;text-align:center}
-  .ver{justify-content:center}
+  .t-copiar{padding:10px 6px;width:122px}
+  .t-codigo{font-size:.6rem}
+  .t-loja{gap:10px}
+  .t-logo{width:38px;height:38px}
 }
 </style>
 </head>
@@ -248,30 +256,16 @@ section{margin-top:48px;scroll-margin-top:20px}
     <div class="titulo">
       <span class="rotulo">Achadinhos</span>
       <h2 id="titulo-cupons">Cupons que eu <em>uso</em> e recomendo</h2>
-      <p>Produtos que estão na minha rotina, com desconto das marcas parceiras.</p>
+      <p>Toque no código para copiar e no nome da marca para ir à loja.</p>
     </div>
-
-    <!-- LINK DOS CUPONS: troque o endereço abaixo se mudar a página de cupons -->
-    <a class="wallet" href="https://bio.site/cuponsduane" target="_blank" rel="noopener" aria-label="Ver todos os meus cupons de desconto">
-      <!-- Cartões de trás: troque os nomes das categorias à vontade -->
-      <span class="passe p1" aria-hidden="true"><span>💄 Beleza &amp; cabelo</span><small>cupom</small></span>
-      <span class="passe p2" aria-hidden="true"><span>🧴 Skincare</span><small>cupom</small></span>
-      <span class="passe p3" aria-hidden="true"><span>💪 Fitness &amp; bem-estar</span><small>cupom</small></span>
-
-      <span class="cupom">
-        <span class="cupom-topo" style="display:block">
-          <span class="mini">Wallet da Duane</span>
-          <b class="h3">Todos os meus <em>cupons</em> num lugar só</b>
-          <span class="desc">Toque para ver as marcas e copiar os códigos.</span>
-        </span>
-        <span class="picote" style="display:block" aria-hidden="true"></span>
-        <span class="cupom-base">
-          <span class="codigo" aria-hidden="true">🏷️ cupons ativos</span>
-          <span class="ver">Ver cupons →</span>
-        </span>
-      </span>
-    </a>
+    <!-- A lista é gerada a partir do array "cupons" no script, lá embaixo -->
+    <ul class="cupons" id="lista-cupons"></ul>
   </section>
+
+  <div class="aviso" id="aviso" role="status" aria-live="polite">
+    <span class="app c-rosa" aria-hidden="true">🏷️</span>
+    <span id="aviso-txt">Cupom copiado!</span>
+  </div>
 
   <!-- ===================== SOBRE ===================== -->
   <section aria-labelledby="titulo-sobre" class="surgir" style="animation-delay:.52s">
@@ -294,6 +288,73 @@ section{margin-top:48px;scroll-margin-top:20px}
 </main>
 
 <script>
+/* =====================================================================
+   CUPONS
+   marca = nome | codigo = cupom | site = link da loja | tipo = categoria
+   logo = arquivo em fotos/logos (deixe "" para mostrar a inicial da marca)
+   Para adicionar um cupom, copie uma linha e troque os dados.
+   ===================================================================== */
+const cupons = [
+  { marca: "Arvensis",       codigo: "DUANE",          tipo: "Cabelo",          site: "https://www.arvensis.com.br/",      logo: "logo-arvensis.webp" },
+  { marca: "Aura Beauty",    codigo: "AURADUANE",      tipo: "Perfumaria",      site: "https://aurabeautyclub.com.br/",    logo: "logo-aura-beauty.webp" },
+  { marca: "Lues",           codigo: "DUANE10",        tipo: "Skincare",        site: "https://bio.site/cuponsduane",      logo: "logo-lues.webp" },
+  { marca: "Glam",           codigo: "DUANE",          tipo: "Beleza",          site: "https://www.glam.com.br/",          logo: "" },
+  { marca: "Vhita",          codigo: "10DUANESAMPAIO", tipo: "Suplementos",     site: "https://www.vhita.com.br/",         logo: "" },
+  { marca: "BigBoom",        codigo: "DUANE",          tipo: "Suplementos",     site: "https://usebigboom.com.br/",        logo: "logo-bigboom.webp" },
+  { marca: "ADA TINA",       codigo: "AANECARDOSO",    tipo: "Maquiagem",       site: "https://www.adatina.com.br/",       logo: "" },
+  { marca: "Biomarine",      codigo: "AANECARDOSO",    tipo: "Skincare",        site: "https://www.biomarine.com.br/",     logo: "" },
+  { marca: "Océane",         codigo: "AANECARDOSO",    tipo: "Maquiagem",       site: "https://www.oceane.com.br/",        logo: "" },
+  { marca: "Simple Organic", codigo: "FLP-ANECORNIO",  tipo: "Skincare",        site: "https://www.simpleorganic.com.br/", logo: "" },
+];
+
+const lista = document.getElementById("lista-cupons");
+lista.innerHTML = cupons.map((c, i) => `
+  <li class="ticket">
+    <a class="t-loja" href="${c.site}" target="_blank" rel="noopener" aria-label="Ir para a loja ${c.marca}">
+      <span class="t-logo" aria-hidden="true">${c.logo ? `<img src="fotos/logos/${c.logo}" alt="" width="44" height="44" loading="lazy">` : c.marca.charAt(0)}</span>
+      <span class="t-nome"><b>${c.marca}</b><small>${c.tipo} <i>· loja ›</i></small></span>
+    </a>
+    <span class="t-picote" aria-hidden="true"></span>
+    <button class="t-copiar" type="button" data-i="${i}" aria-label="Copiar cupom ${c.codigo} da ${c.marca}">
+      <span class="t-codigo">${c.codigo}</span>
+      <span class="t-acao">copiar</span>
+    </button>
+  </li>`).join("");
+
+/* copiar (com plano B para o navegador do Instagram) */
+function copiar(texto){
+  if (navigator.clipboard && window.isSecureContext) {
+    return navigator.clipboard.writeText(texto).catch(() => copiarAntigo(texto));
+  }
+  return Promise.resolve(copiarAntigo(texto));
+}
+function copiarAntigo(texto){
+  const campo = document.createElement("textarea");
+  campo.value = texto; campo.setAttribute("readonly", "");
+  campo.style.position = "fixed"; campo.style.opacity = "0";
+  document.body.appendChild(campo); campo.select(); campo.setSelectionRange(0, 99);
+  try { document.execCommand("copy"); } catch (e) {}
+  campo.remove();
+}
+
+const aviso = document.getElementById("aviso");
+const avisoTxt = document.getElementById("aviso-txt");
+let tempoAviso;
+lista.addEventListener("click", e => {
+  const bt = e.target.closest(".t-copiar");
+  if (!bt) return;
+  const c = cupons[bt.dataset.i];
+  copiar(c.codigo).then(() => {
+    bt.classList.add("ok");
+    bt.querySelector(".t-acao").textContent = "copiado ✓";
+    setTimeout(() => { bt.classList.remove("ok"); bt.querySelector(".t-acao").textContent = "copiar"; }, 2200);
+    avisoTxt.innerHTML = `<b>${c.codigo}</b> copiado!<br>É só colar no carrinho da ${c.marca}.`;
+    aviso.classList.add("ver");
+    clearTimeout(tempoAviso);
+    tempoAviso = setTimeout(() => aviso.classList.remove("ver"), 2600);
+  });
+});
+
 /* relógio de verdade na barrinha de status */
 function horaAgora(){
   const d = new Date();
