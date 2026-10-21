@@ -112,9 +112,35 @@ section{margin-top:48px;scroll-margin-top:20px}
 .grade-apps a:hover{transform:translateY(-4px)}
 .grade-apps a:active{transform:scale(.92)}
 
+/* ----- cupons (estilo Wallet do iPhone) ----- */
+.wallet{position:relative;display:block;width:100%;border:0;background:none;font:inherit;text-align:left;cursor:pointer;color:var(--texto);padding:120px 0 0;transition:transform .35s var(--mola)}
+.wallet:active{transform:scale(.98)}
+.passe{position:absolute;left:0;right:0;height:110px;border-radius:20px;padding:14px 18px;display:flex;justify-content:space-between;align-items:flex-start;font-weight:700;font-size:.8rem;box-shadow:0 -6px 18px -10px rgba(0,0,0,.25);transition:transform .45s var(--mola)}
+.passe span{display:flex;align-items:center;gap:8px}
+.passe small{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;opacity:.75}
+.passe.p1{top:0;background:var(--manteiga);color:var(--marrom)}
+.passe.p2{top:40px;background:var(--rosa-claro);color:#fff}
+.passe.p3{top:80px;background:var(--marrom);color:#fff}
+.wallet:hover .p1{transform:translateY(-10px)}
+.wallet:hover .p2{transform:translateY(-5px)}
+.cupom{display:block;position:relative;z-index:1;background:var(--branco);border:1px solid var(--linha);border-radius:22px;box-shadow:var(--sombra-forte);overflow:hidden}
+.cupom-topo{padding:20px 20px 18px}
+.cupom-topo .mini{display:block;font-size:.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--texto-2)}
+.cupom-topo .h3{display:block;font-size:1.25rem;font-weight:800;letter-spacing:-.035em;line-height:1.15;margin-top:6px}
+.cupom-topo .h3 em{font-style:normal;color:var(--rosa)}
+.cupom-topo .desc{display:block;margin-top:6px;color:var(--texto-2);font-size:.86rem}
+/* picote do cupom */
+.picote{position:relative;height:0;border-top:2px dashed var(--linha);margin:0 18px}
+.picote::before,.picote::after{content:"";position:absolute;top:-12px;width:22px;height:22px;border-radius:50%;background:var(--fundo);border:1px solid var(--linha)}
+.picote::before{left:-30px}
+.picote::after{right:-30px}
+.cupom-base{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px 18px}
+.codigo{font-weight:700;font-size:.78rem;letter-spacing:.02em;color:var(--marrom);background:var(--manteiga-suave);border:1.5px dashed var(--manteiga);padding:7px 12px;border-radius:10px}
+.ver{display:inline-flex;align-items:center;gap:6px;background:var(--rosa);color:#fff;font-weight:700;font-size:.88rem;padding:10px 16px;border-radius:999px;white-space:nowrap;box-shadow:0 8px 18px -8px rgba(215,79,115,.7)}
+
 /* ----- cupons (tickets) ----- */
 .cupons{display:grid;gap:10px}
-.ticket{display:flex;align-items:stretch;background:var(--branco);border:1px solid var(--linha);border-radius:20px;box-shadow:var(--sombra);overflow:hidden;transition:transform .35s var(--mola)}
+.ticket{display:flex;box-shadow:none;align-items:stretch;background:var(--branco);border:1px solid var(--linha);border-radius:20px;box-shadow:var(--sombra);overflow:hidden;transition:transform .35s var(--mola)}
 .ticket:hover{transform:translateY(-2px)}
 .t-loja{flex:1;min-width:0;display:flex;align-items:center;gap:12px;padding:12px 10px 12px 12px;text-decoration:none;color:var(--texto)}
 .t-loja:active{opacity:.7}
@@ -138,8 +164,23 @@ section{margin-top:48px;scroll-margin-top:20px}
 .cupons-nota{margin-top:12px;text-align:center;font-size:.8rem;color:var(--texto-2)}
 .cupons-nota a{color:var(--rosa-texto);font-weight:700;text-decoration:none}
 
+
+/* ----- gaveta dos cupons (sobe de baixo, estilo iPhone) ----- */
+.folha-fundo{position:fixed;inset:0;z-index:40;background:rgba(22,22,22,.35);opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+.folha-fundo.aberta{opacity:1;visibility:visible}
+.folha{position:fixed;left:0;right:0;bottom:0;z-index:41;margin:0 auto;max-width:480px;max-height:86vh;display:flex;flex-direction:column;background:var(--fundo);border-radius:28px 28px 0 0;box-shadow:0 -20px 50px -20px rgba(0,0,0,.35);transform:translateY(105%);visibility:hidden;transition:transform .45s cubic-bezier(.2,.9,.25,1),visibility .45s}
+.folha.aberta{transform:none;visibility:visible}
+.folha-alca{width:40px;height:5px;border-radius:99px;background:rgba(0,0,0,.18);margin:10px auto 0;flex:none}
+.folha-topo{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 18px 12px;flex:none}
+.folha-topo h3{font-size:1.25rem;font-weight:800;letter-spacing:-.035em}
+.folha-topo h3 em{font-style:normal;color:var(--rosa)}
+.folha-topo p{font-size:.8rem;color:var(--texto-2);margin-top:2px}
+.fechar{flex:none;width:34px;height:34px;border-radius:50%;border:0;background:rgba(0,0,0,.07);font-size:1.3rem;line-height:1;color:var(--texto);cursor:pointer}
+.folha-lista{overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;padding:4px 16px max(24px,env(safe-area-inset-bottom))}
+body.travado{overflow:hidden}
+
 /* aviso "copiado" estilo notificação do iPhone */
-.aviso{position:fixed;left:50%;top:max(12px,env(safe-area-inset-top));z-index:50;transform:translate(-50%,-140%);display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.88);-webkit-backdrop-filter:blur(20px) saturate(160%);backdrop-filter:blur(20px) saturate(160%);border:1px solid rgba(255,255,255,.9);box-shadow:var(--sombra-forte);border-radius:20px;padding:10px 16px 10px 10px;font-size:.86rem;font-weight:600;line-height:1.35;width:max-content;max-width:calc(100% - 32px);transition:transform .45s var(--mola)}
+.aviso{color:var(--texto);position:fixed;left:50%;top:max(12px,env(safe-area-inset-top));z-index:60;transform:translate(-50%,-140%);display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.88);-webkit-backdrop-filter:blur(20px) saturate(160%);backdrop-filter:blur(20px) saturate(160%);border:1px solid rgba(255,255,255,.9);box-shadow:var(--sombra-forte);border-radius:20px;padding:10px 16px 10px 10px;font-size:.86rem;font-weight:600;line-height:1.35;width:max-content;max-width:calc(100% - 32px);transition:transform .45s var(--mola)}
 .aviso.ver{transform:translate(-50%,0)}
 .aviso .app{width:34px;height:34px;border-radius:10px;font-size:1rem}
 .aviso b{color:var(--rosa-texto)}
@@ -256,11 +297,42 @@ section{margin-top:48px;scroll-margin-top:20px}
     <div class="titulo">
       <span class="rotulo">Achadinhos</span>
       <h2 id="titulo-cupons">Cupons que eu <em>uso</em> e recomendo</h2>
-      <p>Toque no código para copiar e no nome da marca para ir à loja.</p>
+      <p>Produtos que estão na minha rotina, com desconto das marcas parceiras.</p>
     </div>
-    <!-- A lista é gerada a partir do array "cupons" no script, lá embaixo -->
-    <ul class="cupons" id="lista-cupons"></ul>
+    <button class="wallet" type="button" id="abrir-cupons" aria-haspopup="dialog" aria-controls="folha">
+      <!-- Cartões de trás: troque os nomes das categorias à vontade -->
+      <span class="passe p1" aria-hidden="true"><span>💄 Maquiagem &amp; beleza</span><small>cupom</small></span>
+      <span class="passe p2" aria-hidden="true"><span>🧴 Skincare &amp; cabelo</span><small>cupom</small></span>
+      <span class="passe p3" aria-hidden="true"><span>💪 Suplementos</span><small>cupom</small></span>
+
+      <span class="cupom">
+        <span class="cupom-topo" style="display:block">
+          <span class="mini">Wallet da Duane</span>
+          <b class="h3">Todos os meus <em>cupons</em> num lugar só</b>
+          <span class="desc">Toque para ver as marcas e copiar os códigos.</span>
+        </span>
+        <span class="picote" style="display:block" aria-hidden="true"></span>
+        <span class="cupom-base">
+          <span class="codigo" aria-hidden="true">🏷️ <span id="qtd-cupons">10</span> cupons ativos</span>
+          <span class="ver">Ver cupons →</span>
+        </span>
+      </span>
+    </button>
   </section>
+
+  <!-- GAVETA DOS CUPONS: a lista é gerada a partir do array "cupons" no script -->
+  <div class="folha-fundo" id="folha-fundo"></div>
+  <div class="folha" id="folha" role="dialog" aria-modal="true" aria-labelledby="folha-titulo" aria-hidden="true">
+    <div class="folha-alca" aria-hidden="true"></div>
+    <div class="folha-topo">
+      <div>
+        <h3 id="folha-titulo">Meus <em>cupons</em></h3>
+        <p>Toque no código para copiar e no nome para ir à loja.</p>
+      </div>
+      <button class="fechar" type="button" id="fechar-cupons" aria-label="Fechar cupons">×</button>
+    </div>
+    <div class="folha-lista"><ul class="cupons" id="lista-cupons"></ul></div>
+  </div>
 
   <div class="aviso" id="aviso" role="status" aria-live="polite">
     <span class="app c-rosa" aria-hidden="true">🏷️</span>
@@ -297,7 +369,7 @@ section{margin-top:48px;scroll-margin-top:20px}
 const cupons = [
   { marca: "Arvensis",       codigo: "DUANE",          tipo: "Cabelo",          site: "https://www.arvensis.com.br/",      logo: "logo-arvensis.webp" },
   { marca: "Aura Beauty",    codigo: "AURADUANE",      tipo: "Perfumaria",      site: "https://aurabeautyclub.com.br/",    logo: "logo-aura-beauty.webp" },
-  { marca: "Lues",           codigo: "DUANE10",        tipo: "Skincare",        site: "https://bio.site/cuponsduane",      logo: "logo-lues.webp" },
+  { marca: "Lues",           codigo: "DUANE10",        tipo: "Skincare",        site: "https://lues.com.br/",               logo: "logo-lues.webp" },
   { marca: "Glam",           codigo: "DUANE",          tipo: "Beleza",          site: "https://www.glam.com.br/",          logo: "" },
   { marca: "Vhita",          codigo: "10DUANESAMPAIO", tipo: "Suplementos",     site: "https://www.vhita.com.br/",         logo: "" },
   { marca: "BigBoom",        codigo: "DUANE",          tipo: "Suplementos",     site: "https://usebigboom.com.br/",        logo: "logo-bigboom.webp" },
@@ -353,6 +425,43 @@ lista.addEventListener("click", e => {
     clearTimeout(tempoAviso);
     tempoAviso = setTimeout(() => aviso.classList.remove("ver"), 2600);
   });
+});
+
+
+/* abrir e fechar a gaveta dos cupons */
+document.getElementById("qtd-cupons").textContent = cupons.length;
+const folha = document.getElementById("folha");
+const folhaFundo = document.getElementById("folha-fundo");
+const abrirBt = document.getElementById("abrir-cupons");
+function abrirCupons(){
+  folha.classList.add("aberta"); folhaFundo.classList.add("aberta");
+  folha.setAttribute("aria-hidden","false"); document.body.classList.add("travado");
+  setTimeout(() => document.getElementById("fechar-cupons").focus(), 50);
+}
+function fecharCupons(){
+  folha.classList.remove("aberta"); folhaFundo.classList.remove("aberta");
+  folha.setAttribute("aria-hidden","true"); document.body.classList.remove("travado");
+  abrirBt.focus();
+}
+abrirBt.addEventListener("click", abrirCupons);
+document.getElementById("fechar-cupons").addEventListener("click", fecharCupons);
+folhaFundo.addEventListener("click", fecharCupons);
+document.addEventListener("keydown", e => { if (e.key === "Escape" && folha.classList.contains("aberta")) fecharCupons(); });
+
+/* arrastar a gaveta para baixo para fechar */
+let inicioY = null;
+folha.addEventListener("touchstart", e => { if (folha.querySelector(".folha-lista").scrollTop <= 0) inicioY = e.touches[0].clientY; }, {passive:true});
+folha.addEventListener("touchmove", e => {
+  if (inicioY === null) return;
+  const d = e.touches[0].clientY - inicioY;
+  if (d > 0) { folha.style.transition = "none"; folha.style.transform = `translateY(${d}px)`; }
+}, {passive:true});
+folha.addEventListener("touchend", e => {
+  if (inicioY === null) return;
+  const d = e.changedTouches[0].clientY - inicioY;
+  folha.style.transition = ""; folha.style.transform = "";
+  if (d > 90) fecharCupons();
+  inicioY = null;
 });
 
 /* relógio de verdade na barrinha de status */
